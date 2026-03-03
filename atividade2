@@ -1,0 +1,44 @@
+
+package br.ulbra.at2;
+
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) {
+// Atividade 1
+//        Estoque prod1 = new Estoque();
+//        
+//        prod1.marcaProd = "Nestlé";
+//        prod1.nomeProd = "Chocolate de sal";
+//        prod1.quantidadeProd = 12;
+//        
+//        Estoque prod2 = new Estoque();
+//        
+//        prod2.marcaProd = "Cara";
+//        prod2.nomeProd = "Salgadinho caro";
+//        prod2.quantidadeProd = 1;
+//        
+//        prod1.mostrarDados();
+//        prod2.mostrarDados();
+////////////////////////////////////////////////////
+// Atividade 2
+//        circulo c1 = new circulo();
+//        Scanner ler = new Scanner(System.in);
+//        
+//        System.out.println("Informe o valor do raio: ");
+//        c1.setRaio(ler.nextDouble());
+//        
+//        System.out.println("O raio informado foi de: " + c1.getRaio());
+//        
+//        c1.calcularArea();
+//        c1.calcularDiametro();
+//        c1.calcularPerimetro();
+/////////////////////////////////////////////////////   
+// Atividade 3
+        
+
+
+        
+     
+    }
+}
