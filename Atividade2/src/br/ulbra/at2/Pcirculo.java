@@ -27,13 +27,26 @@ public class Pcirculo extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btn3 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         txtRaio = new javax.swing.JLabel();
         tdtRaio = new javax.swing.JTextField();
         txtPerimetro = new javax.swing.JLabel();
         txtArea = new javax.swing.JLabel();
         txtDiametro = new javax.swing.JLabel();
-        btn = new javax.swing.JButton();
+        btnP = new javax.swing.JButton();
+        btn1 = new javax.swing.JButton();
+        btnD = new javax.swing.JButton();
+        btnA = new javax.swing.JButton();
+
+        btn3.setBackground(new java.awt.Color(0, 204, 51));
+        btn3.setForeground(new java.awt.Color(0, 153, 51));
+        btn3.setText("CALCULAR");
+        btn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3ActionPerformed(evt);
+            }
+        });
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 255, 102));
@@ -60,12 +73,39 @@ public class Pcirculo extends javax.swing.JFrame {
 
         txtDiametro.setText("RESULTADO DO DIAMETRO");
 
-        btn.setBackground(new java.awt.Color(0, 204, 51));
-        btn.setForeground(new java.awt.Color(0, 153, 51));
-        btn.setText("CALCULAR");
-        btn.addActionListener(new java.awt.event.ActionListener() {
+        btnP.setBackground(new java.awt.Color(0, 204, 51));
+        btnP.setForeground(new java.awt.Color(0, 153, 51));
+        btnP.setText("Resultado 1");
+        btnP.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActionPerformed(evt);
+                btnPActionPerformed(evt);
+            }
+        });
+
+        btn1.setBackground(new java.awt.Color(0, 204, 51));
+        btn1.setForeground(new java.awt.Color(0, 153, 51));
+        btn1.setText("CALCULAR");
+        btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1ActionPerformed(evt);
+            }
+        });
+
+        btnD.setBackground(new java.awt.Color(0, 204, 51));
+        btnD.setForeground(new java.awt.Color(0, 153, 51));
+        btnD.setText("Resultado 3");
+        btnD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDActionPerformed(evt);
+            }
+        });
+
+        btnA.setBackground(new java.awt.Color(0, 204, 51));
+        btnA.setForeground(new java.awt.Color(0, 153, 51));
+        btnA.setText("Resultado 2");
+        btnA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAActionPerformed(evt);
             }
         });
 
@@ -73,16 +113,9 @@ public class Pcirculo extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtPerimetro)
-                            .addComponent(txtArea)
-                            .addComponent(txtDiametro))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btn, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtRaio)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -91,28 +124,56 @@ public class Pcirculo extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGap(0, 59, Short.MAX_VALUE)
                                 .addComponent(jLabel1)
-                                .addGap(77, 77, 77)))))
+                                .addGap(77, 77, 77))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtArea)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnA))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtDiametro)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btnD))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(txtPerimetro)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(btnP)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(29, 29, 29))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(283, Short.MAX_VALUE)
+                    .addComponent(btn1, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(16, 16, 16)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
                 .addGap(37, 37, 37)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtRaio)
                     .addComponent(tdtRaio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(48, 48, 48)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btn, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(txtPerimetro)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtArea)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtDiametro)))
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtPerimetro)
+                    .addComponent(btnP, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtArea)
+                    .addComponent(btnA, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtDiametro)
+                    .addComponent(btnD, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(52, 52, 52))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(264, Short.MAX_VALUE)
+                    .addComponent(btn1)
+                    .addGap(4, 4, 4)))
         );
 
         pack();
@@ -121,15 +182,33 @@ public class Pcirculo extends javax.swing.JFrame {
     private void tdtRaioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tdtRaioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tdtRaioActionPerformed
-
-    private void btnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActionPerformed
         circulo c = new circulo();
+    private void btnPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPActionPerformed
+        c.setRaio(Double.parseDouble(tdtRaio.getText()));
+        txtPerimetro.setText(c.calcularP());
+    }//GEN-LAST:event_btnPActionPerformed
+
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        
         c.setRaio(Double.parseDouble(tdtRaio.getText()));
         txtArea.setText(c.calcularA());
         txtPerimetro.setText(c.calcularP());
         txtDiametro.setText(c.calcularD());
-        
-    }//GEN-LAST:event_btnActionPerformed
+    }//GEN-LAST:event_btn1ActionPerformed
+
+    private void btnDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDActionPerformed
+        c.setRaio(Double.parseDouble(tdtRaio.getText()));
+        txtDiametro.setText(c.calcularD());
+    }//GEN-LAST:event_btnDActionPerformed
+
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn3ActionPerformed
+
+    private void btnAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAActionPerformed
+        c.setRaio(Double.parseDouble(tdtRaio.getText()));
+        txtArea.setText(c.calcularA());
+    }//GEN-LAST:event_btnAActionPerformed
 
     /**
      * @param args the command line arguments
@@ -167,7 +246,11 @@ public class Pcirculo extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn;
+    private javax.swing.JButton btn1;
+    private javax.swing.JButton btn3;
+    private javax.swing.JButton btnA;
+    private javax.swing.JButton btnD;
+    private javax.swing.JButton btnP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField tdtRaio;
     private javax.swing.JLabel txtArea;
