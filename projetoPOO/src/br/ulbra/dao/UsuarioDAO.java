@@ -1,6 +1,7 @@
 
 package br.ulbra.dao;
 
+import br.ulbra.model.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -45,16 +46,15 @@ public class UsuarioDAO {
     }
 
 
-public void create(Usuarios u) {
+public void create(Usuario u) {
         PreparedStatement stmt = null;
         try {
-            stmt = con.prepareStatement("INSERT INTO tbusuarios (nomeusu, emailusu, senhausu, foneusu, sexousu) VALUES (?,?,?,?,?)");
+            stmt = con.prepareStatement("INSERT INTO tbusuario (nome, email, senha, sexo) VALUES (?,?,?,?)");
 
-            stmt.setString(1, u.getNomeUsu());
-            stmt.setString(2, u.getEmailUsu());
-            stmt.setString(3, u.getSenhaUsu()); 
-            stmt.setString(4, u.getFoneUsu());
-            stmt.setString(5, u.getSexoUsu());
+            stmt.setString(1, u.getNome());
+            stmt.setString(2, u.getEmail());
+            stmt.setString(3, u.getSenha()); 
+            stmt.setString(4, u.getSexo());
            
             stmt.executeUpdate();
             JOptionPane.showMessageDialog(null, "Usuário Salvo com sucesso!");
