@@ -5,6 +5,14 @@
  */
 package br.ulbra.view;
 
+import br.ulbra.dao.UsuarioDAO;
+import com.sun.istack.internal.logging.Logger;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import javax.swing.JOptionPane;
+import javax.swing.text.StyledEditorKit;
+import sun.util.logging.PlatformLogger;
+
 /**
  *
  * @author aluno.saolucas
@@ -17,7 +25,7 @@ public class FormLoginView extends javax.swing.JFrame {
     public FormLoginView() {
         initComponents();
         this.setLocationRelativeTo(null);
-        
+
     }
 
     /**
@@ -186,7 +194,22 @@ public class FormLoginView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        // TODO add your handling code here:
+        UsuarioDAO dao = null;
+        try {
+            dao = new UsuarioDAO();
+            if (dao.checkLogin(txtEmail.getText(), txtSenha.getText())) {
+                new FormDashBoardView().setVisible(true);
+                this.dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Login ou Senha incorreta!");
+            }
+
+        } catch (SQLException ex) {
+            JOptionPane.showMessageDialog(null, "Erro:" + ex.getMessage());
+
+        }
+
+
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
@@ -198,7 +221,7 @@ public class FormLoginView extends javax.swing.JFrame {
     }//GEN-LAST:event_txtEmailMouseClicked
 
     private void txtSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSenhaActionPerformed
-        
+
     }//GEN-LAST:event_txtSenhaActionPerformed
 
     private void txtSenhaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtSenhaMouseClicked

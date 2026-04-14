@@ -53,7 +53,7 @@ public class FormUsuarioView extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 255));
 
@@ -86,6 +86,11 @@ public class FormUsuarioView extends javax.swing.JFrame {
         });
 
         txtEmail.setText("Insira seu E-mail...");
+        txtEmail.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtEmailMouseClicked(evt);
+            }
+        });
         txtEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEmailActionPerformed(evt);
@@ -93,6 +98,11 @@ public class FormUsuarioView extends javax.swing.JFrame {
         });
 
         txtSenha.setText("jPasswordField1");
+        txtSenha.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtSenhaMouseClicked(evt);
+            }
+        });
         txtSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtSenhaActionPerformed(evt);
@@ -168,12 +178,9 @@ public class FormUsuarioView extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addGap(16, 16, 16))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addComponent(jButton2)
-                                .addGap(16, 16, 16))))
+                            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButton2, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addGap(16, 16, 16))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(0, 6, Short.MAX_VALUE))))
@@ -307,6 +314,14 @@ public class FormUsuarioView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSenhaActionPerformed
 
+    private void txtEmailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtEmailMouseClicked
+        txtEmail.setText("");
+    }//GEN-LAST:event_txtEmailMouseClicked
+
+    private void txtSenhaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtSenhaMouseClicked
+        txtSenha.setText("");
+    }//GEN-LAST:event_txtSenhaMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -364,14 +379,11 @@ public class FormUsuarioView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JRadioButton rbFem;
     private javax.swing.JRadioButton rbMasc;
     private javax.swing.JTextField txtEmail;

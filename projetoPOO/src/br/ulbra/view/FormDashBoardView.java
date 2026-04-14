@@ -23,7 +23,7 @@ public class FormDashBoardView extends javax.swing.JFrame {
         jMenu3 = new javax.swing.JMenu();
         jMenuItem4 = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Sistema POO");
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 255));
@@ -45,7 +45,7 @@ public class FormDashBoardView extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(72, 72, 72)
                 .addComponent(jLabel1)
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(76, Short.MAX_VALUE))
         );
 
         jMenuBar1.setBackground(new java.awt.Color(255, 102, 153));
@@ -59,6 +59,11 @@ public class FormDashBoardView extends javax.swing.JFrame {
         jMenuItem1.setBackground(new java.awt.Color(255, 153, 153));
         jMenuItem1.setForeground(new java.awt.Color(43, 9, 62));
         jMenuItem1.setText("Usuario");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem1);
 
         jMenuItem2.setBackground(new java.awt.Color(255, 153, 153));
@@ -105,7 +110,7 @@ public class FormDashBoardView extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -114,6 +119,10 @@ public class FormDashBoardView extends javax.swing.JFrame {
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
       
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        new FormUsuarioView().setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
   
     public static void main(String args[]) {
